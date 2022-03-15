@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Page Web Projet</title>
+        <link rel="shortcut icon" href="file:///Users/msaber/Downloads/image/Zenart2.jpg">
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body background="m2j105czeau-sarah-dorweiler.jpg"  style="background-size: 120% auto; background-repeat: no-repeat; ">
+       <main>
+        <nav class="navigation">
+            
+            <ul>
+    
+                <li class="elementNav">
+                    <a href="index.html" class="zoom" >
+                        Accueil
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageB.html" class="zoom">
+                        Nos prestations
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="designpage2.html" class="zoom">
+                        Nos engagements
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageD.html" class="zoom">
+                        À propos
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="login.html" class="zoom">
+                        Connexion
+                    <hr></a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <nav class="navigation">
+            
+            <ul id="navbar">
+    
+                <li class="elementNav">
+                    <a href="index.html" class="zoom" >
+                        Accueil
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageB.html" class="zoom">
+                        Nos prestations
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="designpage2.html" class="zoom">
+                        Nos engagements
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageD.html" class="zoom">
+                        À propos
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="login.html" class="zoom">
+                        Connexion
+                    <hr></a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        
+        <img src="Zenart-removebg-preview.png" style="width: 17%; margin-left: auto; margin-right: auto; margin-bottom: 0%; display: block;">
+        
+        <div id="loginerror-holder">
+            <p id="loginerror">Invalid username<span id="errormsg">and/or password</span></p>
+        </div>
+        <div style="align-items: center; display: flex; justify-content: center; height: 100%; width: 100%; margin-top: 2%; margin-bottom: 10%;">
+        <form style="align-self: flex-start; display: grid; justify-content: center; align-items: center; margin-top: 0%; backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.2); padding: 1rem 2rem;" id="loginform"> 
+            <p>Nom d'utilisateur:</p><input type="text" name="username" id="username" style="margin-bottom: 8%;">
+            <p>Mot de passe:</p><input type="password" name="password" id="password" style="margin-bottom: 12%;">
+            <input type="submit" value="Login" id="loginsubmit" style="margin-bottom: 12%; width: 40%; align-items: center; margin-right: auto; margin-left: auto;">
+        </form>
+        </div>
+        <p>Nom d'utilisateur pour le login : Saber / Mai / Anouar</p><br>
+        <p>Mot de passe : zenartteam</p>
+        
+    </main>
+    <script>
+        const login = document.getElementById("loginform");
+        const loginsubmit = document.getElementById("loginsubmit");
+        const loginerror = document.getElementById("loginerror");
+        loginsubmit.addEventListener("click", (e) => {
+            e.preventDefault();
+            const username = login.username.value;
+            const password = login.password.value;
+            if (username === "saber" && password === "zenartteam" || username === "mai" && password==="zenartteam" || username==="anouar" && password==="zenartteam"){
+                window.location.replace("succslogin.html");
+            } else {
+                loginerror.style.opacity = 1;
+            }
+        }
+        
+        )
+        
+    </script>
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+           if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                      document.getElementById("navbar").style.top = "0";
+             } else {
+                     document.getElementById("navbar").style.top = "-500px";
+             }
+}
+</script>
+</body>
+</html>

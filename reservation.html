@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Page Web Projet</title>
+        <link rel="shortcut icon" href="file:///Users/msaber/Downloads/image/Zenart2.jpg">
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+<body>
+        <header>
+    
+        <nav class="navigation">
+            <ul>
+                <li class="elementNav">
+                    <a class="zoom" href="index.html">
+                        Accueil
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageB.html" class="zoom">
+                        Nos prestations
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="designpage2.html" class="zoom">
+                        Nos engagements
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageD.html" class="zoom">
+                        À propos
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="login.html" class="zoom">
+                        Connexion
+                    <hr></a>
+                </li>
+                
+            </ul>
+        </nav>
+
+        <nav class="navigation">
+            
+            <ul id="navbar">
+    
+                <li class="elementNav">
+                    <a href="index.html" class="zoom" >
+                        Accueil
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageB.html" class="zoom">
+                        Nos prestations
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="designpage2.html" class="zoom">
+                        Nos engagements
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="pageD.html" class="zoom">
+                        À propos
+                    <hr></a>
+                </li>
+                <li class="elementNav">
+                    <a href="login.html" class="zoom">
+                        Connexion
+                    <hr></a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+    
+
+
+
+        <div style="width:900px;height:auto;border:1px solid grey; display: flex;flex-direction: column;border: 20px ridge; padding-top: 5px; padding-bottom: 50px;margin-top: 100px; margin-left: auto;margin-right: auto;margin-bottom: 100px;" class="centrer">     
+            <div class="a" style="margin-top: 0px;"><strong><hr>Vous êtes prêts/prêtes..<hr></strong></div>
+
+
+    
+            <form name="newCommand" action="#" class="box" id="new-command" onsubmit="return false">  
+                   <div class="container">          
+                   <label><strong>Nom</strong> &nbsp<input type="text" name="nom" placeholder="John" required><br></br>    </label>
+                   <label><strong>Prénom</strong> &nbsp<input type="text" name="prenom" placeholder="Colber" required><br></br></label>      
+                   <label><strong>N° Telephone</strong>&nbsp<input type="text" name="telephone" placeholder="+1 234 543.." required><br></br>   </label>                 
+                   <lebel><strong>Adresse E-mail</strong> &nbsp<input type="email" name="email" placeholder="JohnColber@.." required><br></br>  </lebel>
+            </div>
+        
+            <label><strong>Choisissez votre centre ZenArt : </strong>
+                <select name="livraison" id="livraison" size=1 class="container">
+                    <option value="Villejuif">Villejuif Louis Aragon
+                    <option value="Trocadero">Paris - Trocadéro
+                    <option value="Trocadero">Saint-Denis
+                </select>
+                </label>
+            
+        
+        
+            <p>       
+
+            <strong>Vous préferez que le masseur soit : </strong>
+            <select name="masseur" id="masseurId" >       
+                <option value="Homme">Homme
+                <option value="Femme">Femme
+            </select>
+            <br></br>
+            
+            <strong>Durée souhaitée : </strong>
+            <select name="duree" >
+                <option value="1h">1h
+                <option value="1h30">1h30
+                <option value="2h">2h    
+            </select>
+        
+            <p>
+            <strong>Nombre de personnes : </strong>
+            <select name="personnes" >
+                <option value="1">1
+                <option value="2">2
+                <option value="Plus">Plus
+            </select><br><br>
+
+            <label for="reserv" id="datereserv" name="datereserv"><strong>Choisissez la date de votre réservation:</strong>
+                <input type="date" id="reserv" ></label><br>
+        
+      <br>        <label id="promo"><strong>Code promo (optionnel):</strong><input type="text" id="promo"><br><br></label>
+         
+          
+            <p> 
+             <button type="submit" class="btn" onclick="ajouterclient()">Ajouter</button>
+             <button type="button" class="btn"  onclick="supprimer()">Supprimer</button>
+             <button type="reset"  class="btn" onclick="annuler()">Annuler</button>
+            <!-- <button type="button" class="btn"  onclick="afficherDate()">Date et Heure</button> -->
+
+
+            <input id="Aujourdhui" type="date" name="date" value="" readonly>
+<script>
+document.getElementById("Aujourdhui").valueAsDate = new Date();
+</script>
+             
+             
+        
+        
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main>
+    <div class="box">
+         
+        <table style="margin-right: auto; margin-left: auto;" class="datatable" id="tableau">
+            <thead>
+            
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Adresse E-mail</th>
+                    <th>N° de telephone</th>
+                    <th>Centre choisi</th>
+                    <th>Preference masseur</th>
+                    <th>Durée demandée</th>
+                    <th>Nombre des personnes</th>
+                    <th>Date de reservation</th>
+                    <th>Code Promo</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+    </div>
+
+</main>
+
+<footer style="background-color: #faf0e6; margin-left: -20px; margin-right: -20px; margin-bottom: -20px;">
+    <div style="margin-right: 20%; margin-left: 28%; font-size: large; font-family:Verdana, Geneva, Tahoma, sans-serif; margin-bottom: 50px;">
+        <br><br><h3>Restez informés de nos promotions et nouvautés</h3>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <input type="email" style="border: none; border-bottom: 2px solid black; width: 30%; background-color: #faf0e6; font-size: large; margin-right: 1%; margin-left: -3%;"  value placeholder="E-MAIL" >
+        <input type="submit" value="Souscrire" id="souscrire" style="background-color: #faf0e6; border: 0.2px solid black; padding: 8px 8px 8px 8px; cursor: pointer;">
+    </div>
+    <div>
+        <div style="margin-left: 15%;"><h3>Nos centres</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.7646620378005!2d2.2853139156745335!3d48.862697879287964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ffb666721a5%3A0x8dbf34b77b272395!2sPl.%20du%20Trocad%C3%A9ro%20et%20du%2011%20Novembre%2C%20Paris!5e0!3m2!1sen!2sfr!4v1640888982934!5m2!1sen!2sfr" width="300" height="200" style="border:0; margin-right: 2%;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41942.42448679431!2d2.3306832281687457!3d48.9267934992002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66eaae7346d61%3A0xc7efebbaf928e90d!2sSaint-Denis!5e0!3m2!1sen!2sfr!4v1640889061676!5m2!1sen!2sfr" width="300" height="200" style="border:0; margin-right: 2%;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10514.828382206391!2d2.3675582!3d48.7874819!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef3c9405a18c1022!2sVillejuif%20Louis%20Aragon!5e0!3m2!1sen!2sfr!4v1640889137581!5m2!1sen!2sfr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div style="margin-left: 15%; display: inline-block; vertical-align: top;"><h3>Nos services</h3>
+                <div><a href="reservation.html" >Reserver un massage.</a></div>
+                <div><a href="designpage2.html">Article: Comment vivre Zen?</a></div>
+                <div><a href="pageD.html">À propos de site.</a></div>
+                <div><a href="pageB.html">Nos plans pour vous!</a></div>
+        </div>
+        <div style="margin-left: 15%; display: inline-block; margin-left: 10%; text-align: left;"><h3>FAQ</h3>        
+            <nav class="navigation" style="text-align: left; margin: -40px -40px -40px -75px;"><div style="font-size: 10px; width: 200%;"><ul><li class="elementNavv"><a>y'aura t-il des offres de réductions pour les clients abonnés?<span style="text-align: left; width: 100%; margin-top: -10px;">    Etre abonné chez nous c'est de benificier de plusieures réductions et offres spéciaux, cela peut meme vous offrir une séance de massage gratuite. Merci de vous présenter à l'un de nos centres pour vous abonner et récupérer votre carte abonné.
+            </span></a></li></ul></div></nav>
+            <nav class="navigation" style="text-align: left; margin: -50px -40px -40px -75px;"><div style="font-size: 10px; width: 200%;"><ul><li class="elementNavv"><a>Comment je peux contacter l'équipe de ZenArt?<span style="text-align: left; width: 100%; margin-top: -10px;">    On met à votre disposition un formulaire à remplir pour que vous puissez nous contacter, vous trouvez le formulaire en appuyant sur le text de cette question.
+            </span></a></li></ul></div></nav>
+            <nav class="navigation" style="text-align: left; margin: -50px -40px -40px -75px;"><div style="font-size: 10px; width: 200%;"><ul><li class="elementNavv"><a>Comment je signale si y'a un probléme avec le fonctionnement de site?<span style="text-align: left; width: 100%; margin-top: -10px;">    Si y'a un probléme avec le fonctionnement de site merci de le mentionner sur le meme formulaire concerné pour nous contacter.
+            </span></a></li></ul></div></nav>
+            <nav class="navigation" style="text-align: left; margin: -50px -40px -40px -75px;"><div style="font-size: 10px; width: 200%;"><ul><li class="elementNavv"><a>Est-ce que je peux joindre l'équipe?<span style="text-align: left; width: 100%; margin-top: -10px;">    Malheureusement et pour l'instant, il y'a aucunne possibilité pour postuler à notre équipe. 
+            </span></a></li></ul></div></nav>
+        </div>
+        
+    
+        <div style="margin-left: 15%;"><h3>Suivez Nous!</h3>
+        </div>
+ 
+        <a href="https://www.instagram.com/zenart_projet/">
+            <img src="5335781_camera_instagram_social media_instagram logo_icon.png" style="width: 30px; margin-left: 15%;"></a>
+            <a href="https://www.facebook.com/ZenArt-108635741698886">
+            <img src="5305154_fb_facebook_facebook logo_icon.png" style="width: 30px; margin-left: 2%;"></a>
+            <a href="https://www.linkedin.com/feed/">
+            <img src="5279114_linkedin_network_social network_linkedin logo_icon.png" style="width: 30px; margin-left: 2%;"></a>
+
+
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="Zenart-removebg-preview.png" style="width: 300px; margin-left: 2%;">
+
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; ">&copy; 2021 ZenArt Tous droits réservés<br><br><br><br><br><br><br><br></div>
+
+
+
+        
+
+        
+
+
+
+    </div>
+   
+</footer>
+
+                
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script src="script.js"></script>
+
+
+
+
+  
+
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+           if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                      document.getElementById("navbar").style.top = "0";
+             } else {
+                     document.getElementById("navbar").style.top = "-500px";
+             }
+}
+</script>
+</body>
+
+
+
+
